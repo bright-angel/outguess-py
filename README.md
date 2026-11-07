@@ -270,7 +270,12 @@ documented.
 ## Licence
 
 OutGuess is distributed under a BSD-style licence; the original copyright
-notice is preserved in `LICENSE`, together with the bundled libjpeg notice. This
-port keeps the same terms.
+notice is preserved in `LICENSE`, and this port keeps the same terms,
+including the advertising acknowledgement.
+
+The JPEG codec is a reimplementation of the libjpeg 6b code that OutGuess
+bundles, so `LICENSE` also carries the Independent JPEG Group's acknowledgement:
+
+> This software is based in part on the work of the Independent JPEG Group.
 
 [upstream]: https://github.com/resurrecting-open-source-projects/outguess

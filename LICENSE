@@ -1,3 +1,11 @@
+Copyright (c) 1999-2001 Niels Provos <provos@citi.umich.edu>
+Copyright (c) 2002      Samuele Giovanni Tonon <samu@debian.org>
+Copyright (c) 2016      Joao Eriberto Mota Filho <eriberto@debian.org>
+Copyright (c) 2017      Chris Rorvick <chris@rorvick.com>
+Copyright (c) 2020      Robin Vobruba <hoijui.quaero@gmail.com>
+Copyright (c) 2021      Daniel T. Borelli <daltomi@disroot.org>
+Copyright (c) 2026      outguess-py contributors
+
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
 are met:
@@ -22,3 +30,17 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+--------------------------------------------------------------------------
+
+The JPEG codec in this package is a Python reimplementation of the libjpeg
+6b code that OutGuess ships with. Its quantisation tables, Huffman tables,
+integer DCT/IDCT and chroma sampling routines are derived from the
+Independent JPEG Group's libjpeg 6b, which carries this notice:
+
+    This software is based in part on the work of the Independent JPEG
+    Group.
+
+libjpeg's own terms permit use, copying, modification and distribution for
+any purpose and without fee, provided that the above acknowledgement appears
+in all copies.
