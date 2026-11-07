@@ -1,0 +1,146 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: test (${{ matrix.os }}, py${{ matrix.python }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: "3.9"
+          - os: ubuntu-latest
+            python: "3.10"
+          - os: ubuntu-latest
+            python: "3.11"
+          - os: ubuntu-latest
+            python: "3.12"
+          - os: ubuntu-latest
+            python: "3.13"
+          - os: macos-latest
+            python: "3.12"
+          - os: windows-latest
+            python: "3.12"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[test]"
+
+      - name: Test
+        run: python -m pytest -q
+
+      - name: Round trip through the installed script
+        shell: bash
+        run: |
+          tmp=$(mktemp -d)
+          printf 'ci round trip' > "$tmp/msg.txt"
+          cp tests/data/large.pnm "$tmp/cover.pnm"
+          outguess -k ci-key -d "$tmp/msg.txt" "$tmp/cover.pnm" "$tmp/stego.pnm"
+          outguess -k ci-key -r "$tmp/stego.pnm" "$tmp/back.txt"
+          cmp "$tmp/msg.txt" "$tmp/back.txt"
+
+  lint:
+    name: lint and package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Ruff
+        run: python -m ruff check src tests validation tools
+
+      - name: Build sdist and wheel
+        run: python -m build
+
+      - name: Check the wheel installs and runs standalone
+        run: |
+          python -m venv /tmp/wheelcheck
+          /tmp/wheelcheck/bin/python -m pip install --quiet dist/*.whl
+          tmp=$(mktemp -d)
+          printf 'wheel round trip' > "$tmp/msg.txt"
+          cp tests/data/large.pnm "$tmp/cover.pnm"
+          # The wheel must work with no source tree on sys.path: run from a
+          # scratch directory so an editable install cannot mask a packaging bug.
+          (cd "$tmp" && /tmp/wheelcheck/bin/outguess -k k -d msg.txt cover.pnm stego.pnm)
+          (cd "$tmp" && /tmp/wheelcheck/bin/outguess -k k -r stego.pnm back.txt)
+          cmp "$tmp/msg.txt" "$tmp/back.txt"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/*
+          if-no-files-found: error
+
+  cross-validation:
+    # Drives the original C program and this port over the same matrix and
+    # compares the results.  Non-blocking on purpose: the byte-exactness of the
+    # statistical-foiling path depends on one alignment cell inside the C build
+    # (validation/NOTES.md, section 1), so a binary built by a different
+    # toolchain than the recorded reference can legitimately differ.  Treat a
+    # red run here as "look at the report", not as "the port is broken".
+    name: cross-validation vs C (informative)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e "."
+
+      - name: Fetch the upstream sources
+        run: tools/fetch_upstream.sh
+
+      - name: Build the C oracle
+        run: CC=cc tools/build_reference.sh
+
+      - name: Cross-validate
+        run: python validation/cross_validate.py
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cross-validation-report
+          path: |
+            validation/REPORT.md
+            validation/report.json

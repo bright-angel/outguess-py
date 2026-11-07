@@ -1,0 +1,28 @@
+# Normalise line endings so the shell scripts stay executable on checkout,
+# even when the repository is cloned on Windows with core.autocrlf=true.
+* text=auto eol=lf
+
+*.sh   text eol=lf
+*.py   text eol=lf
+*.c    text eol=lf
+*.h    text eol=lf
+*.md   text eol=lf
+*.toml text eol=lf
+*.yml  text eol=lf
+*.cfg  text eol=lf
+LICENSE text eol=lf
+
+# Fixture carriers and recorded reference output are compared byte for byte;
+# never let git touch them.
+*.jpg  binary
+*.jpeg binary
+*.ppm  binary
+*.pgm  binary
+*.pnm  binary
+*.bin  binary
+*.raw  binary
+*.png  binary
+*.exe  binary
+
+# Keep the diff of the recorded Golay / ARC4 vectors reviewable.
+tests/data/vectors/*.txt text eol=lf

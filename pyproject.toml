@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "outguess-py"
+version = "0.4.0"
+description = "Pure-Python, bit-compatible reimplementation of OutGuess 0.4 universal steganography tool"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "BSD-4-Clause"
+license-files = ["LICENSE"]
+authors = [
+    { name = "OutGuess Python port contributors" },
+]
+keywords = ["steganography", "outguess", "jpeg", "pnm", "ppm", "golay", "steganalysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Multimedia :: Graphics",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+dev = ["pytest>=7.0", "build", "ruff"]
+
+[project.scripts]
+outguess = "outguess.cli:main"
+outguess-extract = "outguess.cli:extract_main"
+outguess-histogram = "outguess.histogram:main"
+outguess-seek = "outguess.seek:main"
+outguess-validate = "outguess.validation:main"
+
+[project.urls]
+# Replace OWNER with the GitHub account this fork is published under.
+Repository = "https://github.com/OWNER/outguess-py"
+Issues = "https://github.com/OWNER/outguess-py/issues"
+# The program this port reproduces.
+Upstream = "https://github.com/resurrecting-open-source-projects/outguess"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+src = ["src", "tests", "validation", "tools"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]

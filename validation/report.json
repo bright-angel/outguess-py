@@ -1,0 +1,895 @@
+{
+  "reference": "_reference/outguess.exe",
+  "counts": {
+    "pass": 72,
+    "known": 8,
+    "edge": 0,
+    "fail": 0
+  },
+  "outcomes": [
+    {
+      "carrier": "sample.ppm",
+      "case": "default",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.ppm",
+      "case": "ecc",
+      "bytes_equal": false,
+      "stderr_equal": false,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": [
+        "C: '  0:  529(38.2%)[81.6%], bias -221386(-418.50), saved:  14, total: 4.31%' != PY: '  0:  533(38.5%)[82.3%], bias  -22(-0.04), saved:  13, total: 4.34%'",
+        "C: '  3:  538(38.9%)[83.0%], bias -232038(-431.30), saved:  13, total: 4.38%' != PY: '  1:  523(37.8%)[80.7%], bias  -16(-0.03), saved:  15, total: 4.26%'",
+        "C: '  6:  516(37.3%)[79.6%], bias -258594(-501.15), saved:  16, total: 4.20%' != PY: '  2:  516(37.3%)[79.6%], bias  -23(-0.04), saved:  16, total: 4.20%'",
+        "C: '6, -258078: Embedding data: 1288 in 12288' != PY: '  7:  489(35.3%)[75.5%], bias  -27(-0.06), saved:  19, total: 3.98%'"
+      ]
+    },
+    {
+      "carrier": "sample.ppm",
+      "case": "seed7",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.ppm",
+      "case": "iter8",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.ppm",
+      "case": "no-foil",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.ppm",
+      "case": "mark",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.ppm",
+      "case": "stats",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.ppm",
+      "case": "derive",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.ppm",
+      "case": "quality90",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.ppm",
+      "case": "quality100",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "default",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "ecc",
+      "bytes_equal": false,
+      "stderr_equal": false,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": [
+        "C: '  0:  495(35.8%)[76.4%], bias -52324(-105.71), saved:  18, total: 7.16%' != PY: '  0:  495(35.8%)[76.4%], bias  -54(-0.11), saved:  18, total: 7.16%'",
+        "C: '  1:  517(37.4%)[79.8%], bias -68413(-132.33), saved:  15, total: 7.48%' != PY: '  9:  473(34.2%)[73.0%], bias  -35(-0.07), saved:  21, total: 6.84%'",
+        "C: '  4:  534(38.6%)[82.4%], bias -72986(-136.68), saved:  13, total: 7.73%' != PY: '  19:  478(34.5%)[73.8%], bias  -41(-0.09), saved:  20, total: 6.92%'",
+        "C: '  7:  509(36.8%)[78.5%], bias -79666(-156.51), saved:  16, total: 7.36%' != PY: '  25:  480(34.7%)[74.1%], bias  -44(-0.09), saved:  20, total: 6.94%'"
+      ]
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "seed7",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "iter8",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "no-foil",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "mark",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "stats",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "derive",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "quality90",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "large.pnm",
+      "case": "quality100",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "default",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "ecc",
+      "bytes_equal": false,
+      "stderr_equal": false,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": [
+        "C: '  0:  536(38.7%)[82.7%], bias -115308(-215.13), saved:  13, total: 10.48%' != PY: '  0:  534(38.6%)[82.4%], bias  390(0.73), saved:  13, total: 10.44%'",
+        "C: '  5:  515(37.2%)[79.5%], bias -119238(-231.53), saved:  16, total: 10.07%' != PY: '  1:  508(36.7%)[78.4%], bias  349(0.69), saved:  17, total: 9.93%'",
+        "C: '  8:  524(37.9%)[80.9%], bias -141704(-270.43), saved:  15, total: 10.25%' != PY: '  2:  494(35.7%)[76.2%], bias  326(0.66), saved:  18, total: 9.66%'",
+        "C: '8, -141180: Embedding data: 1288 in 5114' != PY: '  83:  490(35.4%)[75.6%], bias  297(0.61), saved:  19, total: 9.58%'"
+      ]
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "seed7",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "iter8",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "no-foil",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "mark",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "stats",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "derive",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "quality90",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "sample.jpg",
+      "case": "quality100",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "default",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "ecc",
+      "bytes_equal": false,
+      "stderr_equal": false,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": [
+        "C: '  0:  509(36.8%)[78.5%], bias -145484(-285.82), saved:  16, total: 6.95%' != PY: '  0:  513(37.1%)[79.2%], bias  309(0.60), saved:  16, total: 7.01%'",
+        "C: '  1:  525(37.9%)[81.0%], bias -150085(-285.88), saved:  14, total: 7.17%' != PY: '  2:  490(35.4%)[75.6%], bias  330(0.67), saved:  19, total: 6.69%'",
+        "C: '  14:  523(37.8%)[80.7%], bias -177727(-339.82), saved:  15, total: 7.15%' != PY: '  10:  490(35.4%)[75.6%], bias  327(0.67), saved:  19, total: 6.69%'",
+        "C: ' 142:  503(36.3%)[77.6%], bias -185442(-368.67), saved:  17, total: 6.87%' != PY: '  29:  497(35.9%)[76.7%], bias  290(0.58), saved:  18, total: 6.79%'"
+      ]
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "seed7",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "iter8",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "no-foil",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "mark",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "stats",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "derive",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "quality90",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "case": "quality100",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "default",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "ecc",
+      "bytes_equal": false,
+      "stderr_equal": false,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": [
+        "C: '  0:  529(38.2%)[81.6%], bias -439987(-831.73), saved:  14, total: 2.50%' != PY: '  0:  542(39.2%)[83.6%], bias  355(0.65), saved:  12, total: 2.57%'",
+        "C: '  45:  541(39.1%)[83.5%], bias -448050(-828.19), saved:  12, total: 2.56%' != PY: '  4:  519(37.5%)[80.1%], bias  366(0.71), saved:  15, total: 2.46%'",
+        "C: '  93:  516(37.3%)[79.6%], bias -460188(-891.84), saved:  16, total: 2.44%' != PY: '  5:  502(36.3%)[77.5%], bias  328(0.65), saved:  17, total: 2.38%'",
+        "C: ' 120:  519(37.5%)[80.1%], bias -461389(-889.00), saved:  15, total: 2.46%' != PY: '  13:  494(35.7%)[76.2%], bias  334(0.68), saved:  18, total: 2.34%'"
+      ]
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "seed7",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "iter8",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "no-foil",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "mark",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "stats",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "derive",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "quality90",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "case": "quality100",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "default",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "ecc",
+      "bytes_equal": false,
+      "stderr_equal": false,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": [
+        "C: '  0:  518(37.4%)[79.9%], bias -378684(-731.05), saved:  15, total: 2.55%' != PY: '  0:  521(37.6%)[80.4%], bias  321(0.62), saved:  15, total: 2.56%'",
+        "C: '  4:  486(35.1%)[75.0%], bias -427223(-879.06), saved:  19, total: 2.39%' != PY: '  1:  492(35.5%)[75.9%], bias  293(0.60), saved:  19, total: 2.42%'",
+        "C: '  8:  482(34.8%)[74.4%], bias -460723(-955.86), saved:  20, total: 2.37%' != PY: '  4:  488(35.3%)[75.3%], bias  263(0.54), saved:  19, total: 2.40%'",
+        "C: '  13:  481(34.8%)[74.2%], bias -461724(-959.93), saved:  20, total: 2.37%' != PY: '  46:  493(35.6%)[76.1%], bias  254(0.52), saved:  18, total: 2.43%'"
+      ]
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "seed7",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "iter8",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "no-foil",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "mark",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "stats",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "derive",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "quality90",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "case": "quality100",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "default",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "ecc",
+      "bytes_equal": false,
+      "stderr_equal": false,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": [
+        "C: '  0:  534(38.6%)[82.4%], bias -345118(-646.29), saved:  13, total: 2.54%' != PY: '  0:  531(38.4%)[81.9%], bias  393(0.74), saved:  14, total: 2.52%'",
+        "C: '  2:  494(35.7%)[76.2%], bias -394933(-799.46), saved:  18, total: 2.35%' != PY: '  1:  500(36.1%)[77.2%], bias  369(0.74), saved:  18, total: 2.37%'",
+        "C: '  10:  479(34.6%)[73.9%], bias -421715(-880.41), saved:  20, total: 2.27%' != PY: '  2:  497(35.9%)[76.7%], bias  321(0.65), saved:  18, total: 2.36%'",
+        "C: '  15:  534(38.6%)[82.4%], bias -441885(-827.50), saved:  13, total: 2.54%' != PY: '  10:  480(34.7%)[74.1%], bias  319(0.66), saved:  20, total: 2.28%'"
+      ]
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "seed7",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "iter8",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "no-foil",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "mark",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "stats",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "derive",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "quality90",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "case": "quality100",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "default",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "ecc",
+      "bytes_equal": false,
+      "stderr_equal": false,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": [
+        "C: '  0:  507(36.6%)[78.2%], bias -30032(-59.23), saved:  17, total: 11.00%' != PY: '  0:  509(36.8%)[78.5%], bias  -21(-0.04), saved:  16, total: 11.05%'",
+        "C: '  2:  507(36.6%)[78.2%], bias -31675(-62.48), saved:  17, total: 11.00%' != PY: '  1:  507(36.6%)[78.2%], bias  -29(-0.06), saved:  17, total: 11.00%'",
+        "C: '  11:  523(37.8%)[80.7%], bias -35345(-67.58), saved:  15, total: 11.35%' != PY: '  3:  509(36.8%)[78.5%], bias  -32(-0.06), saved:  16, total: 11.05%'",
+        "C: ' 234:  488(35.3%)[75.3%], bias -38467(-78.83), saved:  19, total: 10.59%' != PY: '  7:  469(33.9%)[72.4%], bias  -21(-0.04), saved:  21, total: 10.18%'"
+      ]
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "seed7",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "iter8",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "no-foil",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "mark",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "stats",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "derive",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "quality90",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    },
+    {
+      "carrier": "gradient.ppm",
+      "case": "quality100",
+      "bytes_equal": true,
+      "stderr_equal": true,
+      "c_to_py": true,
+      "py_to_c": true,
+      "note": "",
+      "stderr_diff": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "carrier": "sample.ppm",
+      "dump": "same",
+      "histogram": "same"
+    },
+    {
+      "carrier": "large.pnm",
+      "dump": "same",
+      "histogram": "same"
+    },
+    {
+      "carrier": "sample.jpg",
+      "dump": "same",
+      "dump_note": "trailing padding bits differ",
+      "histogram": "same"
+    },
+    {
+      "carrier": "photo_odd.jpg",
+      "dump": "same",
+      "histogram": "same"
+    },
+    {
+      "carrier": "photo_large.jpg",
+      "dump": "same",
+      "histogram": "same"
+    },
+    {
+      "carrier": "photo_422.jpg",
+      "dump": "same",
+      "dump_note": "trailing padding bits differ",
+      "histogram": "same"
+    },
+    {
+      "carrier": "photo_444.jpg",
+      "dump": "same",
+      "histogram": "same"
+    },
+    {
+      "carrier": "gradient.ppm",
+      "dump": "same",
+      "histogram": "same"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+# --- development-only trees ------------------------------------------------
+# Upstream sources, fetched with tools/fetch_upstream.sh; never vendored.
+/_upstream/
+# Reference binaries produced by tools/build_reference.sh and tools/build_debug.sh.
+/_reference/
+# Scratch space for ad-hoc probing.
+/_probe/
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+/build/
+/dist/
+/wheelhouse/
+.venv/
+venv/
+env/
+
+# --- test and lint caches --------------------------------------------------
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+
+# --- tooling ---------------------------------------------------------------
+# Local WorkBuddy session data (project memory, caches).
+/.workbuddy/
+
+# --- binaries --------------------------------------------------------------
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+*.pdb
+
+# --- editors and OS --------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,17 @@
+include LICENSE
+include README.md
+include CHANGELOG.md
+include CONTRIBUTING.md
+include pyproject.toml
+
+# Ship the fixtures too, so `pytest` works from an unpacked sdist.
+recursive-include tests/data *
+
+# Nothing from the development-only trees belongs in a distribution.
+prune _upstream
+prune _reference
+prune _probe
+prune .github
+prune .workbuddy
+
+global-exclude *.py[cod] __pycache__ *.so *.dll *.exe *.pdb

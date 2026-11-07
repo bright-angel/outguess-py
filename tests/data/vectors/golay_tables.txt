@@ -1,0 +1,22 @@
+# Golay 3-bit tables dumped from the reference C build (golaytest.exe)
+encoding_sha256 c0ab256bd8d2c6b03a657356dbb9ffa24c2acc180dea53a4914bf9eaa72441ea
+decoding_sha256 b5d6d7c25b8dbfafeecdec1da32576b0d74b1d1674464a48b9f71830b42c247d
+enc 0 0
+enc 1 3189
+enc 2 5279
+enc 3 6378
+enc 4 9547
+enc 255 523958
+enc 256 525274
+enc 1023 2095832
+enc 2047 4192709
+enc 2048 4195898
+enc 4095 8388607
+dec 0 0
+dec 1 1
+dec 2 2
+dec 3 3
+dec 4 4
+dec 5 5
+dec 1023 1057024
+dec 2047 163968
